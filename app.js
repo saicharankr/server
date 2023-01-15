@@ -17,7 +17,7 @@ dotenv.config();
 connect(process.env.MONGO_URI);
 
 //use middleware
-app.use(cors());
+app.use(cors({origin:"https://client-gly6q2j01-saicharankr.vercel.app"}));
 app.use(passport.initialize());
 app.use(morgan("dev"));
 app.use(bodyParser.json());
