@@ -17,12 +17,7 @@ dotenv.config();
 connect(process.env.MONGO_URI);
 
 //use middleware
-app.use(cors({
-  "origin": "*",
-  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-  "preflightContinue": false,
-  "optionsSuccessStatus": 204
-}));
+app.use(cors());
 app.use(passport.initialize());
 app.use(morgan("dev"));
 app.use(bodyParser.json());
